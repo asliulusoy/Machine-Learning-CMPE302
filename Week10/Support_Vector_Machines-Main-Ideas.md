@@ -80,3 +80,33 @@ Support Vector Machines.
 1. Start with data in a relatively low dimension
 2. Move the data to higher dimention
 3. Find a Support Vector Classifier that seperates the higher dimensional data into two groups.
+
+**Example:**
+
+If we symbolize the data on an XY graph, and assign the square of the data's value to the Y-axis, we symbolize the data in a higher dimension. It would look like this:
+
+![SVM-XY](https://github.com/asliulusoy/Machine-Learning-CMPE302/assets/132180090/9bf686a0-9111-4d7c-ab9c-e5d76e87422b)
+
+In two dimensions, we can create a support vector classifier that separates red and green data points. This vector will be one-dimensional (a line).
+
+![SVM-XY-C](https://github.com/asliulusoy/Machine-Learning-CMPE302/assets/132180090/c705d721-fecb-4ac8-98e8-ceb29f449d27)
+
+In this example, we assigned the square of the data's value to the Y-axis, but why square, why not cube?
+
+### How Do We Decide How to Transform the Data?
+
+SVMs(Support Vector Machine) use **Kernel Functions** to systematically find SVCs(Support Vector Classifier) in higher dimensions.
+In the example above, we used **Polynomial Kernel**. It has a parameter d, which stands for th *degree of the polynomial*.
+In summary, the Polynomial Kernel systematically increases dimensions by setting d, and the relationships between each pair of observations are used to find a SVC.
+
+* **An Important Note:** Optimal value for d can be optained by *Cross Validation*
+
+### Kernel Trick
+
+In the examples given below, we have seen that the data is transformed from a relatively low dimension to relatively high dimension.
+
+* Kernel functions only calculate the relationships between every pair of points **as if** they are in the higher dimensions.
+* **They don't actually do the transformation.**
+* This trick **reduces the amount of computation** and avoids the math that transforms the data from low to high dimensions.
+
+

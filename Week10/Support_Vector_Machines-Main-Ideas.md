@@ -54,8 +54,10 @@ When we use a Soft Margin to determine the location of a threshold, we use a Sof
 ### Conclusions
 
 1.The soft margin aims to classify the majority of the data correctly, even if it misclassifies some, by using the bias-variance tradeoff.
+
 2. Data outside the margin are correctly classified, while those inside the margin may be misclassified.
-3. Cross-validation is used to find the margin that yields the best results, and the soft margin classifier, also known as the support vector classifier, is used to determine the best threshold.
+3. 
+4. Cross-validation is used to find the margin that yields the best results, and the soft margin classifier, also known as the support vector classifier, is used to determine the best threshold.
 
 
 ## Support Vector Classifier
